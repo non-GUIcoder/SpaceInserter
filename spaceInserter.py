@@ -14,7 +14,7 @@ def displayProgressBar(target, current):
         else:
             bar += '.'
     bar += ']'
-    print(bar, current, "out of", target, " characters sorted", end='')
+    print(bar, current, "out of", target, "characters sorted", end='')
 
 
 def removeNestings(l):
@@ -109,6 +109,9 @@ dictionaryDir = "dictionary.txt"
 rawStr = input("Enter your string here\n\n")
 print('\n')
 
+# Remove all spaces and convert to upper case for dictionary processing
+rawStr = rawStr.upper().replace(" ", "")
+
 file = open(dictionaryDir, "r")
 dictFile = file.read().upper()
 file.close()
@@ -136,14 +139,14 @@ while True:
         break
 
     while (True):
-        word = input("Add a word to dictionary?\n").upper()
+        word = input("Add a word to dictionary?\n").upper().replace(" ", "")
         if word is "":
             break
         else:
             dictFile.append(word)
 
     while (True):
-        word = input("Remove a word from dictionary?\n").upper()
+        word = input("Remove a word from dictionary?\n").upper().replace(" ", "")
         if word is "":
             break
         else:
