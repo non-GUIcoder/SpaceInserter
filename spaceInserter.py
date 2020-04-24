@@ -55,8 +55,7 @@ def findWord(str, recursionCount, candidatesList):
     # Start recursion
     # if there are no availables, terminate this branch
     if len(availables) == 0:
-        print("ERROR: NO MATCHES, CHECK DICTIONARY")
-        return False
+        print("Error: no matches, check input. Does it contain non-letter characters?")
 
     for i in availables:
         subcandidatesList.append(i)
