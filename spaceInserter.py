@@ -14,7 +14,7 @@ def displayProgressBar(target, current):
         else:
             bar += '.'
     bar += ']'
-    print(bar, current, "out of", target, "sorted", end='')
+    print(bar, current, "out of", target, " characters sorted", end='')
 
 
 def removeNestings(l):
@@ -104,7 +104,7 @@ def findWord(str, recursionCount, candidatesList):
     return False
 
 
-dictionaryDir = "/home/shawn/Projects/spaceInserter/dictionary.txt"
+dictionaryDir = "dictionary.txt"
 
 rawStr = input("Enter your string here\n\n")
 print('\n')
@@ -152,8 +152,3 @@ while True:
     file = open(dictionaryDir, "w")
     file.write('\n'.join(dictFile))
     file.close()
-
-print("\nSpace inserter was made by Shawn 'Xiachuan' Xu on 2019-11-09")
-print("Code is available under the GPLv3 License")
-print("Window closing in 5 seconds...")
-time.sleep(5)
